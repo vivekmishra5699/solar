@@ -1,0 +1,37 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.planet-info-box {
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.planet-info-content {
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    background-color: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #cc0000;
+}
