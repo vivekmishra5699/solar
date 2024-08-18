@@ -156,22 +156,7 @@
             scene.background = spaceTexture;
             const jupiterGeometry = new THREE.SphereGeometry(20, 32, 64);
 
-// Generate UVs for the sphere geometry
-jupiterGeometry.faceVertexUvs[0] = [];
-for (let i = 0; i < jupiterGeometry.faces.length; i++) {
-    const face = jupiterGeometry.faces[i];
-    const uvs = [];
-    for (let j = 0; j < 3; j++) {
-        const vertexIndex = face[["a", "b", "c"][j]];
-        const vertex = jupiterGeometry.vertices[vertexIndex];
-        uvs.push(new THREE.Vector2(
-            (vertex.x / 40) + 0.5,
-            (vertex.y / 40) + 0.5
-        ));
-    }
-    jupiterGeometry.faceVertexUvs[0].push(uvs);
-}
-jupiterGeometry.uvsNeedUpdate = true;
+
 
 const normalTexture = textureLoader.load('3dearth/2k_earth_normal_map.png');
 const jupiterTexture = textureLoader.load('3dearth/2k_earth_daymap.jpg');
